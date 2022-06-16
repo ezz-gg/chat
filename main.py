@@ -3,9 +3,10 @@ import json
 
 with open("config.json","r+") as f:
   config = json.load(f)
-  url = config["url"]
+  post = config["posturl"]
+  get = config['geturl']
 
-print(message.get(url))
+print(message.get(get))
 
 name = input("name:")
 contnet = input("content:")
@@ -15,4 +16,4 @@ data = {
   "content": content
 }
 
-print(message.post(url,data=data))
+print(message.post(post,data=data))
